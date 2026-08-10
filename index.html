@@ -114,6 +114,15 @@
   .dial .tags{display:flex; gap:6px; flex-wrap:wrap;}
   .dial .tag{font-size:11.5px; font-weight:700; background:rgba(238,0,0,0.85); color:#fff; padding:3px 9px; border-radius:100px; text-transform:uppercase; letter-spacing:.03em;}
 
+  /* logo lockups */
+  .logos{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-bottom:34px;}
+  .logo-tile{border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--paper);}
+  .logo-tile .art{height:150px; display:flex; align-items:center; justify-content:center; padding:22px;}
+  .logo-tile.dark .art{background:var(--ink);}
+  .logo-tile .art img{max-width:100%; max-height:100%;}
+  .logo-tile .cap{border-top:1px solid var(--line); padding:9px 12px; font-size:12px; color:var(--ink-soft);}
+  .logo-tile .cap strong{display:block; font-size:12.5px; color:var(--ink);}
+
   /* palette */
   .swatches{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin-bottom:28px;}
   .swatch{border-radius:12px; overflow:hidden; border:1px solid var(--line);}
@@ -340,6 +349,24 @@
       <div>
         <h2>Visual identity, quick reference</h2>
         <p>Color and type direction for any generated assets that accompany a communication. Full logo usage rules live on the brand portal, not here.</p>
+      </div>
+    </div>
+    <div class="logos">
+      <div class="logo-tile">
+        <div class="art"><img src="logo-dot-wordmark.png" alt="Primary dot wordmark"></div>
+        <div class="cap"><strong>Primary wordmark</strong>Default lockup for headers and mastheads</div>
+      </div>
+      <div class="logo-tile">
+        <div class="art"><img src="logo-stacked-voice-guide.png" alt="Stacked voice guide lockup"></div>
+        <div class="cap"><strong>Stacked lockup</strong>Cover pages and title slides for this guide</div>
+      </div>
+      <div class="logo-tile dark">
+        <div class="art"><img src="logo-v-tile.png" alt="V tile mark"></div>
+        <div class="cap"><strong>App tile</strong>Avatars, favicons, and square placements</div>
+      </div>
+      <div class="logo-tile">
+        <div class="art"><img src="logo-roundel.png" alt="V roundel mark"></div>
+        <div class="cap"><strong>Roundel</strong>Stamps, badges, and small monochrome uses</div>
       </div>
     </div>
     <div class="swatches">
