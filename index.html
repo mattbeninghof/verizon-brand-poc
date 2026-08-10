@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verizon | Internal Communications Voice Guide</title>
+<meta name="description" content="Brand voice, tone, and messaging reference for AI-assisted internal communications.">
+<meta property="og:title" content="Verizon Internal Communications Voice Guide">
+<meta property="og:description" content="Voice, tone, and messaging reference for internal comms authoring.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23EE0000'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='18' fill='white' text-anchor='middle'%3EV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#EE0000;
+    --red-deep:#B30000;
+    --ink:#0B0B0C;
+    --ink-soft:#3A3A3C;
+    --paper:#FFFFFF;
+    --line:#E4E4E5;
+    --panel:#F6F6F7;
+    --max:1240px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+  }
+  h1,h2,h3,.wordmark{
+    font-family:'Archivo',system-ui,sans-serif;
+    letter-spacing:-0.01em;
+  }
+  a{color:var(--red-deep);}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+
+  /* header */
+  header.top{
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; background:rgba(255,255,255,0.94);
+    backdrop-filter:blur(6px);
+    z-index:20;
+  }
+  .top-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:var(--max); margin:0 auto;}
+  .wordmark{font-weight:900; font-size:20px; display:flex; align-items:center; gap:10px; color:var(--ink);}
+  .wordmark .dot{width:9px; height:9px; border-radius:50%; background:var(--red); display:inline-block;}
+  nav.top-nav{display:flex; gap:22px; flex-wrap:wrap;}
+  nav.top-nav a{color:var(--ink-soft); text-decoration:none; font-size:13.5px; font-weight:600; letter-spacing:.02em; text-transform:uppercase;}
+  nav.top-nav a:hover{color:var(--red-deep);}
+
+  /* hero */
+  .hero{padding:64px 28px 48px; border-bottom:1px solid var(--line);}
+  .hero .kicker{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--red-deep); background:#FDEBEB; padding:6px 12px; border-radius:100px;
+    margin-bottom:22px;
+  }
+  .hero h1{font-size:44px; font-weight:900; line-height:1.06; margin:0 0 18px; max-width:16ch;}
+  .hero p.lead{font-size:18px; color:var(--ink-soft); max-width:62ch; margin:0;}
+  .hero .meta{margin-top:28px; display:flex; gap:28px; flex-wrap:wrap; font-size:13px; color:var(--ink-soft);}
+  .hero .meta strong{color:var(--ink); display:block; font-size:13px; font-weight:700; margin-bottom:2px;}
+
+  section{padding:56px 28px; border-bottom:1px solid var(--line);}
+  section.tight{padding-top:44px;}
+  .section-head{display:flex; align-items:flex-start; gap:16px; margin-bottom:32px; max-width:var(--max); margin-left:auto; margin-right:auto;}
+  .section-head svg{flex:none; width:34px; height:34px;}
+  .section-head h2{font-size:26px; margin:0 0 6px; font-weight:800;}
+  .section-head p{margin:0; color:var(--ink-soft); font-size:15px; max-width:60ch;}
+  .section-inner{max-width:var(--max); margin:0 auto;}
+
+  /* voice pillars */
+  .pillars{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px;}
+  .pillar{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px;}
+  .pillar .num{font-family:'Archivo',sans-serif; font-weight:900; color:var(--red); font-size:13px; letter-spacing:.06em;}
+  .pillar h3{font-size:17px; margin:8px 0 8px; font-weight:800;}
+  .pillar p{margin:0; font-size:14.5px; color:var(--ink-soft);}
+
+  /* messaging pillars strip */
+  .themes{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;}
+  .theme{border-left:3px solid var(--red); padding:4px 0 4px 18px;}
+  .theme h3{margin:0 0 6px; font-size:16px; font-weight:800;}
+  .theme p{margin:0; font-size:14px; color:var(--ink-soft);}
+
+  /* do/dont */
+  .dd-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  .dd{border-radius:14px; padding:22px; border:1px solid var(--line);}
+  .dd.do{background:#F3FAF4;}
+  .dd.dont{background:#FDF3F3;}
+  .dd h3{margin:0 0 14px; font-size:15px; font-weight:800; text-transform:uppercase; letter-spacing:.04em;}
+  .dd.do h3{color:#1E7B34;}
+  .dd.dont h3{color:var(--red-deep);}
+  .dd ul{margin:0; padding-left:18px;}
+  .dd li{font-size:14.5px; margin-bottom:9px; color:var(--ink);}
+
+  /* terminology table */
+  table.term{width:100%; border-collapse:collapse; font-size:14.5px;}
+  table.term th{text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); padding:10px 12px; border-bottom:2px solid var(--ink);}
+  table.term td{padding:12px; border-bottom:1px solid var(--line); vertical-align:top;}
+  table.term tr:last-child td{border-bottom:none;}
+  .use{color:#1E7B34; font-weight:600;}
+  .avoid{color:var(--red-deep); font-weight:600; text-decoration:line-through;}
+
+  /* channel dials */
+  .dials{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px;}
+  .dial{background:var(--ink); color:#fff; border-radius:14px; padding:22px;}
+  .dial h3{margin:0 0 10px; font-size:15px; font-weight:800; color:#fff;}
+  .dial p{margin:0 0 12px; font-size:13.5px; color:#D6D6D8;}
+  .dial .tags{display:flex; gap:6px; flex-wrap:wrap;}
+  .dial .tag{font-size:11.5px; font-weight:700; background:rgba(238,0,0,0.85); color:#fff; padding:3px 9px; border-radius:100px; text-transform:uppercase; letter-spacing:.03em;}
+
+  /* palette */
+  .swatches{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin-bottom:28px;}
+  .swatch{border-radius:12px; overflow:hidden; border:1px solid var(--line);}
+  .swatch .fill{height:80px;}
+  .swatch .label{padding:10px 12px; font-size:12.5px; background:var(--paper);}
+  .swatch .label strong{display:block; font-size:13.5px;}
+  .type-sample{display:grid; grid-template-columns:1fr 1fr; gap:24px;}
+  .type-card{border:1px solid var(--line); border-radius:14px; padding:24px;}
+  .type-card .sample{font-size:30px; font-weight:900; margin:10px 0 6px;}
+  .type-card.body .sample{font-family:'Inter',sans-serif; font-weight:600; font-size:22px;}
+  .type-card p.name{margin:0; font-size:12.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); font-weight:700;}
+
+  /* rewrite example */
+  .rewrite{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .rw-card{border-radius:14px; padding:22px; border:1px solid var(--line);}
+  .rw-card.before{background:var(--panel);}
+  .rw-card.after{background:#FFF6F6; border-color:#F3C9C9;}
+  .rw-card .tag{font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); display:block; margin-bottom:10px;}
+  .rw-card.after .tag{color:var(--red-deep);}
+  .rw-card p{font-size:14.5px; margin:0;}
+
+  footer{padding:36px 28px 60px;}
+  footer .wrap{max-width:var(--max); margin:0 auto; font-size:12.5px; color:var(--ink-soft); border-top:1px solid var(--line); padding-top:22px;}
+
+  @media (max-width:760px){
+    .hero h1{font-size:32px;}
+    .dd-grid, .rewrite, .type-sample{grid-template-columns:1fr;}
+    nav.top-nav{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-inner">
+    <div class="wordmark"><span class="dot"></span>verizon</div>
+    <nav class="top-nav">
+      <a href="#voice">Voice &amp; Tone</a>
+      <a href="#pillars">Messaging Pillars</a>
+      <a href="#dos">Do's &amp; Don'ts</a>
+      <a href="#terms">Terminology</a>
+      <a href="#channels">Channel Guidance</a>
+      <a href="#identity">Visual Identity</a>
+      <a href="#example">Example</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Internal Communications Reference</span>
+    <h1>How Verizon sounds when Verizon talks to Verizon.</h1>
+    <p class="lead">This page defines the voice, tone, and messaging standards for communications written to employees and teams. It is meant to be read by people drafting updates, and by the systems and AI tools that help them draft.</p>
+    <div class="meta">
+      <div><strong>Audience</strong>All employee-facing internal comms</div>
+      <div><strong>Owner</strong>Corporate Communications</div>
+      <div><strong>Applies to</strong>Announcements, newsletters, leader messages, campaigns, alerts</div>
+    </div>
+  </div>
+</div>
+
+<section id="voice">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><path d="M8 12h24v14a2 2 0 0 1-2 2H16l-6 6V12z" stroke="#EE0000" stroke-width="2.2" stroke-linejoin="round"/><path d="M13 18h14M13 23h9" stroke="#EE0000" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <div>
+        <h2>Voice &amp; tone</h2>
+        <p>Five qualities every piece of internal communication should carry, regardless of author or channel.</p>
+      </div>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="num">01</div>
+        <h3>Clear over clever</h3>
+        <p>Say the plain thing first. Lead with what changed and what it means, then add color. No wordplay at the expense of a fast read.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">02</div>
+        <h3>Confident, not corporate</h3>
+        <p>Write like a person who knows the answer, not like a policy document. Cut hedging phrases and passive voice wherever they hide who did what.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">03</div>
+        <h3>Human first</h3>
+        <p>Every message has a person on the other end of it. Acknowledge effort, change, and impact before asking for anything.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">04</div>
+        <h3>Forward-looking</h3>
+        <p>Even hard news points somewhere. Close with what's next, not just what happened.</p>
+      </div>
+      <div class="pillar">
+        <div class="num">05</div>
+        <h3>Inclusive of every role</h3>
+        <p>Write so it lands the same in a call center, a field van, and a headquarters office. Avoid references only desk-based readers would get.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pillars">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="13" stroke="#EE0000" stroke-width="2.2"/><circle cx="20" cy="20" r="6.5" stroke="#EE0000" stroke-width="2.2"/><circle cx="20" cy="20" r="1.6" fill="#EE0000"/></svg>
+      <div>
+        <h2>Company messaging pillars</h2>
+        <p>The recurring themes leadership wants reinforced across quarters. Tie major announcements back to one of these where it's honestly true.</p>
+      </div>
+    </div>
+    <div class="themes">
+      <div class="theme">
+        <h3>A network you can count on</h3>
+        <p>Reliability is earned every day, not claimed once. Reference specifics over adjectives.</p>
+      </div>
+      <div class="theme">
+        <h3>Innovation with a purpose</h3>
+        <p>New technology is framed by the problem it solves for a customer or a colleague, not by the technology itself.</p>
+      </div>
+      <div class="theme">
+        <h3>One team, coast to coast</h3>
+        <p>Frontline, field, and corporate work is one effort. Comms should connect a local win to the bigger picture.</p>
+      </div>
+      <div class="theme">
+        <h3>Investing in our people</h3>
+        <p>Growth, training, and recognition news gets real estate, not just product news.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dos">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><rect x="7" y="7" width="26" height="26" rx="6" stroke="#EE0000" stroke-width="2.2"/><path d="M14 20l4 4 8-9" stroke="#EE0000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <h2>Do's and don'ts</h2>
+        <p>The fast checks for whether a draft is on-voice before it ships.</p>
+      </div>
+    </div>
+    <div class="dd-grid">
+      <div class="dd do">
+        <h3>Do</h3>
+        <ul>
+          <li>Lead the message with the headline, in the first sentence.</li>
+          <li>Use "we" when the company is acting, "you" when addressing the reader directly.</li>
+          <li>Name specific teams or locations when a story has one.</li>
+          <li>Keep sentences short enough to read in a single breath.</li>
+          <li>Give a clear next step or date whenever one exists.</li>
+        </ul>
+      </div>
+      <div class="dd dont">
+        <h3>Don't</h3>
+        <ul>
+          <li>Open with background before the news.</li>
+          <li>Use unexplained internal acronyms on first reference.</li>
+          <li>Reach for superlatives ("best-ever," "unprecedented") without a number behind them.</li>
+          <li>Bury a change in a longer update where it can be missed.</li>
+          <li>Write a headline that only makes sense to headquarters staff.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><path d="M9 10h22v4H9zM9 18h22v4H9zM9 26h14v4H9z" fill="#EE0000"/></svg>
+      <div>
+        <h2>Terminology &amp; style</h2>
+        <p>Reference for word choice an authoring tool should apply automatically.</p>
+      </div>
+    </div>
+    <table class="term">
+      <tr><th>Topic</th><th>Use</th><th>Avoid</th></tr>
+      <tr><td>Company name, first reference</td><td class="use">Verizon</td><td class="avoid">VZ / the company</td></tr>
+      <tr><td>Non-manager staff</td><td class="use">team members, colleagues</td><td class="avoid">resources, headcount</td></tr>
+      <tr><td>Field and store staff</td><td class="use">frontline team</td><td class="avoid">non-corporate staff</td></tr>
+      <tr><td>Numbers under 10 in body copy</td><td class="use">spelled out (three, seven)</td><td class="avoid">digits (3, 7)</td></tr>
+      <tr><td>Serial comma</td><td class="use">used consistently</td><td class="avoid">inconsistent within one piece</td></tr>
+      <tr><td>Change announcements</td><td class="use">what's changing, what stays the same</td><td class="avoid">changes framed only as gains</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="channels">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><path d="M20 8v24M8 20h24" stroke="#EE0000" stroke-width="2.2" stroke-linecap="round"/><circle cx="20" cy="20" r="14" stroke="#EE0000" stroke-width="2.2"/></svg>
+      <div>
+        <h2>Tone by channel</h2>
+        <p>The five voice qualities stay constant. What flexes is formality and length.</p>
+      </div>
+    </div>
+    <div class="dials">
+      <div class="dial">
+        <h3>Leadership announcement</h3>
+        <p>Measured, direct, owns the decision. Longer lead paragraph is acceptable if the news is complex.</p>
+        <div class="tags"><span class="tag">Formal</span><span class="tag">Signed</span></div>
+      </div>
+      <div class="dial">
+        <h3>Frontline / SMS update</h3>
+        <p>Under 300 characters, one idea, action-first. Written for a phone screen between calls.</p>
+        <div class="tags"><span class="tag">Terse</span><span class="tag">Mobile-first</span></div>
+      </div>
+      <div class="dial">
+        <h3>Team celebration post</h3>
+        <p>Warmer, specific about who and what. Light enthusiasm is fine; avoid exclamation-point stacking.</p>
+        <div class="tags"><span class="tag">Warm</span><span class="tag">Specific</span></div>
+      </div>
+      <div class="dial">
+        <h3>Policy / compliance notice</h3>
+        <p>Plain language over legal phrasing wherever the two say the same thing. Link out to full policy text.</p>
+        <div class="tags"><span class="tag">Precise</span><span class="tag">No jargon</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="identity">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><circle cx="15" cy="15" r="6" fill="#EE0000"/><circle cx="26" cy="15" r="6" fill="#0B0B0C"/><circle cx="20.5" cy="26" r="6" fill="none" stroke="#0B0B0C" stroke-width="2"/></svg>
+      <div>
+        <h2>Visual identity, quick reference</h2>
+        <p>Color and type direction for any generated assets that accompany a communication. Full logo usage rules live on the brand portal, not here.</p>
+      </div>
+    </div>
+    <div class="swatches">
+      <div class="swatch"><div class="fill" style="background:#EE0000"></div><div class="label"><strong>Verizon Red</strong>#EE0000</div></div>
+      <div class="swatch"><div class="fill" style="background:#0B0B0C"></div><div class="label"><strong>Ink Black</strong>#0B0B0C</div></div>
+      <div class="swatch"><div class="fill" style="background:#FFFFFF; border-bottom:1px solid #E4E4E5;"></div><div class="label"><strong>Paper White</strong>#FFFFFF</div></div>
+      <div class="swatch"><div class="fill" style="background:#F6F6F7"></div><div class="label"><strong>Panel Grey</strong>#F6F6F7</div></div>
+    </div>
+    <div class="type-sample">
+      <div class="type-card">
+        <p class="name">Headlines</p>
+        <div class="sample" style="font-family:'Archivo',sans-serif;">Aa Bold Grotesk</div>
+        <p style="font-size:13px;color:var(--ink-soft);">Bold, tight tracking, used for headlines and section titles only.</p>
+      </div>
+      <div class="type-card body">
+        <p class="name">Body copy</p>
+        <div class="sample">Aa Readable sans, at size</div>
+        <p style="font-size:13px;color:var(--ink-soft);">Regular weight, generous line height, no more than 65 characters per line.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="example" style="border-bottom:none;">
+  <div class="section-inner">
+    <div class="section-head">
+      <svg viewBox="0 0 40 40" fill="none"><path d="M11 9h18v22H11z" stroke="#EE0000" stroke-width="2.2"/><path d="M15 15h10M15 20h10M15 25h6" stroke="#EE0000" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <div>
+        <h2>Applying the voice</h2>
+        <p>Same news, rewritten to standard. This is the kind of pass an authoring tool should make automatically.</p>
+      </div>
+    </div>
+    <div class="rewrite">
+      <div class="rw-card before">
+        <span class="tag">Before</span>
+        <p>It has been determined that, effective the beginning of next quarter, certain scheduling processes within select regional operations will be transitioned to a new system in order to improve overall efficiency across the organization.</p>
+      </div>
+      <div class="rw-card after">
+        <span class="tag">After, on-voice</span>
+        <p>Starting next quarter, three regions move to a new scheduling system. It's built to cut the time team members spend managing shift swaps, based directly on feedback from the frontline. Your regional lead will share exact dates this month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Illustrative internal communications voice guide, built to demonstrate a Poppulo AI-assisted authoring workflow. Not an official Verizon document.
+  </div>
+</footer>
+
+</body>
+</html>
